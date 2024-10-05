@@ -1,19 +1,18 @@
 {
-  "name": "logger",
+  "name": "websocket-logger",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "github.com/udaykirancodes",
   "license": "ISC",
-  "description": "",
+  "description": "The WebSocket Logger is a Node.js application enabling real-time message logging between clients and servers. It serves as a centralized logging service, ideal for microservices architectures, using the WebSocket protocol.",
   "dependencies": {
     "@types/node": "^22.7.4",
     "@types/ws": "^8.5.12",
     "dotenv": "^16.4.5",
-    "winston": "^3.15.0",
     "ws": "^8.18.0"
   }
 }
