@@ -1,0 +1,19 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.7.4",
+    "@types/ws": "^8.5.12",
+    "dotenv": "^16.4.5",
+    "winston": "^3.15.0",
+    "ws": "^8.18.0"
+  }
+}
