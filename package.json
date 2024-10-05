@@ -1,10 +1,14 @@
 {
   "name": "websocket-logger",
-  "version": "1.0.3",
-  "main": "index.js",
+  "version": "1.0.4",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npx tsc -b",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "github.com/udaykirancodes",
@@ -16,8 +20,5 @@
     "@types/ws": "^8.5.12",
     "dotenv": "^16.4.5",
     "ws": "^8.18.0"
-  },
-  "files": [
-    "dist/**/*"
-  ]
+  }
 }
