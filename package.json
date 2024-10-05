@@ -8,6 +8,7 @@
   "keywords": [],
   "author": "github.com/udaykirancodes",
   "license": "ISC",
+  "type": "module",
   "description": "The WebSocket Logger is a Node.js application enabling real-time message logging between clients and servers. It serves as a centralized logging service, ideal for microservices architectures, using the WebSocket protocol.",
   "dependencies": {
     "@types/node": "^22.7.4",
