@@ -1,12 +1,12 @@
 import fs from "fs";
-import WebSocket from "ws";
+import WebSocket, { WebSocketServer } from "ws";
 
 class ServerLogger {
-  private server: WebSocket.Server;
+  private server: WebSocketServer;
   private logFile: string;
 
   constructor(port: number, logFile: string = "server.log") {
-    this.server = new WebSocket.Server({ port });
+    this.server = new WebSocketServer({ port });
     this.logFile = logFile;
 
     this.initializeServer();
