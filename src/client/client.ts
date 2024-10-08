@@ -18,9 +18,10 @@ export class ClientLogger {
   private messageQueue: LogMessage[] = []; // Queue for messages when disconnected
   private reconnectTimeout: NodeJS.Timeout | null = null;
   private readonly reconnectInterval = 5000; // 5 seconds between reconnection attempts
-
-  constructor(serverUrl: string, serviceName: string) {
+  private printOnConsole: boolean = false;
+  constructor(serverUrl: string, serviceName: string, printOnConsole: boolean) {
     this.serviceName = serviceName;
+    this.printOnConsole = printOnConsole;
     this.ws = this.createWebSocket(serverUrl);
   }
 
@@ -132,6 +133,9 @@ export class ClientLogger {
       service: this.serviceName,
       metadata,
     };
+    if (this.printOnConsole) {
+      console.log(this.formatLogMessage(logMessage));
+    }
     this.sendLogMessage(logMessage);
   }
 
